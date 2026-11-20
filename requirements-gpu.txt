@@ -1,0 +1,4 @@
+# NVIDIA GPU support. CUDA runtime, cuRAND and NVRTC come from pip,
+# so no separate CUDA Toolkit install is needed (only an NVIDIA driver).
+cupy-cuda12x>=13
+cuda-toolkit[cudart,curand,nvrtc]==12.*

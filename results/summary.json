@@ -1,0 +1,603 @@
+{
+  "engine_version": "1.0.0",
+  "run_started_utc": "2026-11-20T04:32:08.008206+00:00",
+  "hardware": {
+    "python": "3.13.14",
+    "os": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.5",
+    "cpu": "AMD Ryzen 7 7445HS w/ Radeon 740M Graphics",
+    "gpu": "NVIDIA GeForce RTX 3050 6GB Laptop GPU",
+    "cupy": "14.2.0",
+    "cuda_runtime": "12.9",
+    "gpu_memory_gb": 6.0
+  },
+  "gpu_available": true,
+  "data": {
+    "ticker": "^SPX",
+    "source": "Yahoo Finance via yfinance (quotes delayed ~15 min)",
+    "fetched_utc": "2026-11-20T04:12:24.885669+00:00",
+    "spot": 7175.83,
+    "underlying_time_utc": "2026-11-19T21:00:00+00:00",
+    "expiries": [
+      "2026-11-25",
+      "2026-12-03",
+      "2026-12-10",
+      "2026-12-18",
+      "2026-12-31",
+      "2027-01-15",
+      "2027-02-19",
+      "2027-03-19",
+      "2027-05-21",
+      "2027-08-20",
+      "2027-11-19"
+    ],
+    "snapshot_file": "data/SPX_20261120_0412.csv"
+  },
+  "cleaning": {
+    "price_source": "mid",
+    "valuation_time_utc": "2026-11-19T21:19:05+00:00",
+    "short_rate_from_long_expiries_pct": 4.531489972333146,
+    "n_raw_contracts": 6290,
+    "n_clean_quotes": 1734,
+    "expiries": [
+      {
+        "expiry": "2026-11-25",
+        "root": "SPXW",
+        "T": 0.01640204845256215,
+        "dte": 5.986747685185184,
+        "F": 7175.310951774359,
+        "D": 0.999257018966313,
+        "rate_pct": 4.531489972333132,
+        "rate_source": "median of longer expiries",
+        "parity_points": 64,
+        "n_quotes": 113,
+        "atm_iv_pct": 26.926610781975857,
+        "status": "ok"
+      },
+      {
+        "expiry": "2026-12-03",
+        "root": "SPXW",
+        "T": 0.03831985667174023,
+        "dte": 13.986747685185184,
+        "F": 7178.504452975971,
+        "D": 0.9982650463126985,
+        "rate_pct": 4.5314899723331346,
+        "rate_source": "median of longer expiries",
+        "parity_points": 46,
+        "n_quotes": 110,
+        "atm_iv_pct": 24.327960788597355,
+        "status": "ok"
+      },
+      {
+        "expiry": "2026-12-10",
+        "root": "SPXW",
+        "T": 0.05749793886352106,
+        "dte": 20.986747685185186,
+        "F": 7180.034057302196,
+        "D": 0.9973978780698792,
+        "rate_pct": 4.53148997233307,
+        "rate_source": "median of longer expiries",
+        "parity_points": 33,
+        "n_quotes": 89,
+        "atm_iv_pct": 23.837577127491294,
+        "status": "ok"
+      },
+      {
+        "expiry": "2026-12-18",
+        "root": "SPXW",
+        "T": 0.07941574708269913,
+        "dte": 28.986747685185183,
+        "F": 7188.114459592803,
+        "D": 0.9964077510044301,
+        "rate_pct": 4.531489972333183,
+        "rate_source": "median of longer expiries",
+        "parity_points": 29,
+        "n_quotes": 157,
+        "atm_iv_pct": 23.197201240125334,
+        "status": "ok"
+      },
+      {
+        "expiry": "2026-12-31",
+        "root": "SPXW",
+        "T": 0.11503218543886352,
+        "dte": 41.986747685185186,
+        "F": 7199.31874659324,
+        "D": 0.9949479852929679,
+        "rate_pct": 4.402958405191578,
+        "rate_source": "parity",
+        "parity_points": 211,
+        "n_quotes": 478,
+        "atm_iv_pct": 21.924626966153298,
+        "status": "ok"
+      },
+      {
+        "expiry": "2027-01-15",
+        "root": "SPXW",
+        "T": 0.1561280758498224,
+        "dte": 56.98674768518518,
+        "F": 7213.683132681542,
+        "D": 0.9935448287029688,
+        "rate_pct": 4.147938144398201,
+        "rate_source": "parity",
+        "parity_points": 38,
+        "n_quotes": 154,
+        "atm_iv_pct": 21.281112386059544,
+        "status": "ok"
+      },
+      {
+        "expiry": "2027-02-19",
+        "root": "SPXW",
+        "T": 0.2520184868087265,
+        "dte": 91.98674768518518,
+        "F": 7239.067618361654,
+        "D": 0.9886447704084131,
+        "rate_pct": 4.531489972333146,
+        "rate_source": "parity",
+        "parity_points": 9,
+        "n_quotes": 51,
+        "atm_iv_pct": 20.46322642873541,
+        "status": "ok"
+      },
+      {
+        "expiry": "2027-03-19",
+        "root": "SPXW",
+        "T": 0.32861666032470827,
+        "dte": 119.94508101851852,
+        "F": 7257.537748039858,
+        "D": 0.985297498022996,
+        "rate_pct": 4.507274508566002,
+        "rate_source": "parity",
+        "parity_points": 14,
+        "n_quotes": 50,
+        "atm_iv_pct": 20.348542870617145,
+        "status": "ok"
+      },
+      {
+        "expiry": "2027-05-21",
+        "root": "SPX",
+        "T": 0.5004773909183156,
+        "dte": 182.67424768518518,
+        "F": 7310.633369069304,
+        "D": 0.9762161987038893,
+        "rate_pct": 4.809648242102605,
+        "rate_source": "parity",
+        "parity_points": 93,
+        "n_quotes": 177,
+        "atm_iv_pct": 20.127809764814543,
+        "status": "ok"
+      },
+      {
+        "expiry": "2027-08-20",
+        "root": "SPX",
+        "T": 0.7497924594114662,
+        "dte": 273.67424768518515,
+        "F": 7386.851739738252,
+        "D": 0.9637024676327028,
+        "rate_pct": 4.931054598144599,
+        "rate_source": "parity",
+        "parity_points": 98,
+        "n_quotes": 174,
+        "atm_iv_pct": 19.92567579512637,
+        "status": "ok"
+      },
+      {
+        "expiry": "2027-11-19",
+        "root": "SPX",
+        "T": 0.9992216831557585,
+        "dte": 364.7159143518519,
+        "F": 7464.255677632222,
+        "D": 0.9513725097561799,
+        "rate_pct": 4.988841891554905,
+        "rate_source": "parity",
+        "parity_points": 105,
+        "n_quotes": 183,
+        "atm_iv_pct": 19.818259144331652,
+        "status": "ok"
+      }
+    ],
+    "smile_outliers_removed": [
+      {
+        "expiry": "2026-12-31",
+        "K": 6065.0,
+        "residual_vol_pts": -4.716885706315649
+      },
+      {
+        "expiry": "2027-08-20",
+        "K": 5575.0,
+        "residual_vol_pts": -1.9654383670242137
+      }
+    ],
+    "n_quotes_before_smile_filter": 1736
+  },
+  "svi": {
+    "n_slices": 11,
+    "butterfly_free_slices": 11,
+    "calendar_violations": 0,
+    "median_rmse_vol_pts": 0.160396328213044,
+    "seconds": 9.207146899949294
+  },
+  "calibration": {
+    "heston": {
+      "model": "Heston",
+      "params": {
+        "v0": 0.08239372813908825,
+        "kappa": 8.471916605795533,
+        "theta": 0.05688121869986754,
+        "sigma": 2.5688066849766913,
+        "rho": -0.7452667314040289
+      },
+      "feller_ratio": 0.14605543246201466,
+      "rmse_vol_pts_calibration_sample": 1.0146932770360972,
+      "seconds": 3.0671331000048667,
+      "n_options": 440,
+      "n_starts": 8,
+      "nfev": 168,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied."
+    },
+    "bates": {
+      "model": "Bates",
+      "params": {
+        "v0": 0.0811241298800097,
+        "kappa": 16.68854814545897,
+        "theta": 0.030418156962016295,
+        "sigma": 1.9061769764209888,
+        "rho": -0.7371681514836325,
+        "lam": 0.06178454386371459,
+        "mu_j": -0.6558664853674109,
+        "delta_j": 0.46867404425113623
+      },
+      "feller_ratio": 0.2794184047871065,
+      "rmse_vol_pts_calibration_sample": 0.6039150760864759,
+      "seconds": 8.590526400017552,
+      "n_options": 440,
+      "n_starts": 8,
+      "nfev": 263,
+      "success": true,
+      "message": "`ftol` termination condition is satisfied."
+    }
+  },
+  "headline": {
+    "all": {
+      "Heston": {
+        "n": 1734,
+        "rmse": 1.0654975613948867,
+        "inside_spread_pct": 12.802768166089965
+      },
+      "Bates": {
+        "n": 1734,
+        "rmse": 0.6069084402583038,
+        "inside_spread_pct": 20.35755478662053
+      },
+      "rmse_reduction_pct": 43.03990339839211
+    },
+    "short_dated_otm_puts": {
+      "Heston": {
+        "n": 132,
+        "rmse": 2.278461268267098,
+        "inside_spread_pct": 3.787878787878788
+      },
+      "Bates": {
+        "n": 132,
+        "rmse": 1.159452780103772,
+        "inside_spread_pct": 39.39393939393939
+      },
+      "rmse_reduction_pct": 49.11246479139832
+    }
+  },
+  "monte_carlo": {
+    "setup": {
+      "F": 7464.255677632222,
+      "T": 1.0,
+      "strikes_over_F": [
+        0.8,
+        0.9,
+        1.0,
+        1.1,
+        1.2
+      ],
+      "n_steps": 252,
+      "params": {
+        "v0": 0.08239372813908825,
+        "kappa": 8.471916605795533,
+        "theta": 0.05688121869986754,
+        "sigma": 2.5688066849766913,
+        "rho": -0.7452667314040289
+      },
+      "note": "forward (undiscounted) prices, calibrated Heston"
+    },
+    "validation_max_abs_z": 3.555260932053305,
+    "variance_reduction_atm": {
+      "Plain": 1.0,
+      "Antithetic": 1.244960935588667,
+      "Conditional": 5.274743752780036,
+      "Conditional + antithetic": 6.390552641167507
+    },
+    "benchmark": [
+      {
+        "device": "cpu",
+        "fused": false,
+        "dtype": "float64",
+        "label": "NumPy float64 (CPU)",
+        "n_paths": 16384,
+        "n_steps": 252,
+        "seconds": 0.3816689999657683,
+        "path_steps_per_sec": 10817666.617855543,
+        "speedup_vs_numpy_f64": 1.0
+      },
+      {
+        "device": "cpu",
+        "fused": false,
+        "dtype": "float64",
+        "label": "NumPy float64 (CPU)",
+        "n_paths": 65536,
+        "n_steps": 252,
+        "seconds": 1.4485727999708615,
+        "path_steps_per_sec": 11400926.484559288,
+        "speedup_vs_numpy_f64": 1.0
+      },
+      {
+        "device": "cpu",
+        "fused": false,
+        "dtype": "float64",
+        "label": "NumPy float64 (CPU)",
+        "n_paths": 262144,
+        "n_steps": 252,
+        "seconds": 7.908180699974764,
+        "path_steps_per_sec": 8353411.550169915,
+        "speedup_vs_numpy_f64": 1.0
+      },
+      {
+        "device": "cpu",
+        "fused": false,
+        "dtype": "float64",
+        "label": "NumPy float64 (CPU)",
+        "n_paths": 1048576,
+        "n_steps": 252,
+        "seconds": 78.79484320001211,
+        "path_steps_per_sec": 3353533.572358951,
+        "speedup_vs_numpy_f64": 1.0
+      },
+      {
+        "device": "cpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "NumPy float32 (CPU)",
+        "n_paths": 16384,
+        "n_steps": 252,
+        "seconds": 0.23042689997237176,
+        "path_steps_per_sec": 17917908.024171833,
+        "speedup_vs_numpy_f64": 1.656356093891514
+      },
+      {
+        "device": "cpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "NumPy float32 (CPU)",
+        "n_paths": 65536,
+        "n_steps": 252,
+        "seconds": 0.8011919999844395,
+        "path_steps_per_sec": 20613126.442002356,
+        "speedup_vs_numpy_f64": 1.808022047148493
+      },
+      {
+        "device": "cpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "NumPy float32 (CPU)",
+        "n_paths": 262144,
+        "n_steps": 252,
+        "seconds": 3.2220770999556407,
+        "path_steps_per_sec": 20502392.07525775,
+        "speedup_vs_numpy_f64": 2.4543735157931628
+      },
+      {
+        "device": "cpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "NumPy float32 (CPU)",
+        "n_paths": 1048576,
+        "n_steps": 252,
+        "seconds": 19.469159599975683,
+        "path_steps_per_sec": 13572293.690598235,
+        "speedup_vs_numpy_f64": 4.047162015155011
+      },
+      {
+        "device": "gpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "CuPy array ops float32 (GPU)",
+        "n_paths": 16384,
+        "n_steps": 252,
+        "seconds": 0.7402973999851383,
+        "path_steps_per_sec": 5577174.794998451,
+        "speedup_vs_numpy_f64": 0.5155617188084551
+      },
+      {
+        "device": "gpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "CuPy array ops float32 (GPU)",
+        "n_paths": 65536,
+        "n_steps": 252,
+        "seconds": 0.7010730000329204,
+        "path_steps_per_sec": 23556850.71201501,
+        "speedup_vs_numpy_f64": 2.0662224902440127
+      },
+      {
+        "device": "gpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "CuPy array ops float32 (GPU)",
+        "n_paths": 262144,
+        "n_steps": 252,
+        "seconds": 0.7277481000055559,
+        "path_steps_per_sec": 90773562.99452472,
+        "speedup_vs_numpy_f64": 10.86664561530891
+      },
+      {
+        "device": "gpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "CuPy array ops float32 (GPU)",
+        "n_paths": 1048576,
+        "n_steps": 252,
+        "seconds": 1.8632280000019819,
+        "path_steps_per_sec": 141819010.87774494,
+        "speedup_vs_numpy_f64": 42.28942630742362
+      },
+      {
+        "device": "gpu",
+        "fused": false,
+        "dtype": "float32",
+        "label": "CuPy array ops float32 (GPU)",
+        "n_paths": 4194304,
+        "n_steps": 252,
+        "seconds": 7.052406200033147,
+        "path_steps_per_sec": 149872905.50493705,
+        "speedup_vs_numpy_f64": null
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float32",
+        "label": "Fused CUDA kernel float32 (GPU)",
+        "n_paths": 16384,
+        "n_steps": 252,
+        "seconds": 0.034356100019067526,
+        "path_steps_per_sec": 120175689.25776054,
+        "speedup_vs_numpy_f64": 11.109206218224514
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float32",
+        "label": "Fused CUDA kernel float32 (GPU)",
+        "n_paths": 65536,
+        "n_steps": 252,
+        "seconds": 0.041624900011811405,
+        "path_steps_per_sec": 396759439.54973376,
+        "speedup_vs_numpy_f64": 34.80063134229313
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float32",
+        "label": "Fused CUDA kernel float32 (GPU)",
+        "n_paths": 262144,
+        "n_steps": 252,
+        "seconds": 0.06202110002050176,
+        "path_steps_per_sec": 1065126029.3378066,
+        "speedup_vs_numpy_f64": 127.50790775011451
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float32",
+        "label": "Fused CUDA kernel float32 (GPU)",
+        "n_paths": 1048576,
+        "n_steps": 252,
+        "seconds": 0.1381688000401482,
+        "path_steps_per_sec": 1912451667.2593126,
+        "speedup_vs_numpy_f64": 570.2795651197406
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float32",
+        "label": "Fused CUDA kernel float32 (GPU)",
+        "n_paths": 4194304,
+        "n_steps": 252,
+        "seconds": 0.4359080000431277,
+        "path_steps_per_sec": 2424742394.944407,
+        "speedup_vs_numpy_f64": null
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float64",
+        "label": "Fused CUDA kernel float64 (GPU)",
+        "n_paths": 16384,
+        "n_steps": 252,
+        "seconds": 0.052042199997231364,
+        "path_steps_per_sec": 79335001.21477665,
+        "speedup_vs_numpy_f64": 7.333836770660599
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float64",
+        "label": "Fused CUDA kernel float64 (GPU)",
+        "n_paths": 65536,
+        "n_steps": 252,
+        "seconds": 0.1055649000336416,
+        "path_steps_per_sec": 156444727.3169107,
+        "speedup_vs_numpy_f64": 13.722106490975957
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float64",
+        "label": "Fused CUDA kernel float64 (GPU)",
+        "n_paths": 262144,
+        "n_steps": 252,
+        "seconds": 0.3368393999990076,
+        "path_steps_per_sec": 196118055.0737076,
+        "speedup_vs_numpy_f64": 23.47760000759431
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float64",
+        "label": "Fused CUDA kernel float64 (GPU)",
+        "n_paths": 1048576,
+        "n_steps": 252,
+        "seconds": 1.2915155999944545,
+        "path_steps_per_sec": 204597723.79143897,
+        "speedup_vs_numpy_f64": 61.009594619182636
+      },
+      {
+        "device": "gpu",
+        "fused": true,
+        "dtype": "float64",
+        "label": "Fused CUDA kernel float64 (GPU)",
+        "n_paths": 4194304,
+        "n_steps": 252,
+        "seconds": 5.03576569998404,
+        "path_steps_per_sec": 209891538.0442243,
+        "speedup_vs_numpy_f64": null
+      }
+    ],
+    "time_to_1bp": {
+      "target_stderr": 0.7464255677632222,
+      "baseline": {
+        "desc": "NumPy float64 on CPU, plain MC + antithetic",
+        "n_paths": 262144,
+        "seconds": 7.547465000010561,
+        "stderr": 1.2952438479956254,
+        "time_to_target_s": 22.726427398081988
+      },
+      "best": {
+        "desc": "cupy-fused-kernel float32 on GPU, conditional MC + antithetic",
+        "n_paths": 1048576,
+        "seconds": 0.4856379000120796,
+        "stderr": 0.2868561179692058,
+        "time_to_target_s": 0.07172454333263006
+      },
+      "effective_speedup": 316.85705258081333
+    }
+  },
+  "figures": [
+    "results/figures/vol_surface_light.png",
+    "results/figures/vol_surface_dark.png",
+    "results/figures/smile_fits_light.png",
+    "results/figures/smile_fits_dark.png",
+    "results/figures/error_buckets_light.png",
+    "results/figures/error_buckets_dark.png",
+    "results/figures/mc_benchmark_light.png",
+    "results/figures/mc_benchmark_dark.png",
+    "results/figures/mc_convergence_light.png",
+    "results/figures/mc_convergence_dark.png"
+  ],
+  "total_seconds": 255.7522167999996
+}

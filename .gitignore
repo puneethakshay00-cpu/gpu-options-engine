@@ -1,0 +1,13 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+
+# Pipeline outputs regenerated on every run (figures, summary.json and RESULTS.md are versioned)
+results/*.csv
+logs/
+
+# Local secrets
+.streamlit/secrets.toml
